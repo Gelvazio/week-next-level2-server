@@ -5,6 +5,12 @@
     "port": 5432,
     "username":"postgres",
     "password":"master",
-    "database": "nextlevel2"
+    "database": "nextlevel2",
+    "migrations": [
+      "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+      "migrationsDir":"./src/database/migrations"
+    }
   }
 

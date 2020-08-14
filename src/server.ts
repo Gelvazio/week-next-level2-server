@@ -9,8 +9,8 @@ app.use(express.json());
 app.post('/users', (request, response) => {
   const users = request.body;
   return response.json(users);
-})
+});
 
 app.listen(3333, () => {
-  console.log("Server Ok.");
-})
+  console.log('Server Ok.');
+});
