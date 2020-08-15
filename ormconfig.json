@@ -6,6 +6,9 @@
     "username":"postgres",
     "password":"master",
     "database": "nextlevel2",
+    "entities": [
+      "./src/models/*.ts"
+    ],
     "migrations": [
       "./src/database/migrations/*.ts"
     ],
