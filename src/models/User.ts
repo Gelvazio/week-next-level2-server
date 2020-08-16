@@ -2,6 +2,7 @@ import {
   Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany,
 } from 'typeorm';
 import Classe from './Classe';
+import Connection from './Connection';
 
 @Entity('users')
 class User {
@@ -22,6 +23,9 @@ class User {
 
   @OneToMany(() => Classe, (classe) => classe.user)
   classes: Classe[];
+
+  @OneToMany(() => Connection, (connection) => connection.user)
+  connections: Connection[];
 
   @CreateDateColumn()
   created_at: Date;
