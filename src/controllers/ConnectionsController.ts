@@ -21,7 +21,9 @@ class ConnectionsController {
   async index(request: Request, response: Response) {
     const connectionRepository = getCustomRepository(ConnectionRepository);
 
-    response.json(await connectionRepository.count());
+    const total = await connectionRepository.count();
+
+    response.json({ total });
   }
 }
 

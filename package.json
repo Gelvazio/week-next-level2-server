@@ -17,9 +17,12 @@
     "eslint-import-resolver-typescript": "^2.2.0",
     "eslint-plugin-import": "2.21.2",
     "ts-node-dev": "^1.0.0-pre.57",
-    "typescript": "^3.9.7"
+    "typescript": "^3.9.7",
+    "@types/cors": "^2.8.7"
+
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "pg": "^8.3.0",
     "reflect-metadata": "^0.1.13",
