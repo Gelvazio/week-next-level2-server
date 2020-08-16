@@ -12,5 +12,6 @@ router.get('/classes', ClassesController.index);
 router.post('/classes', ClassesController.create);
 
 router.post('/connections', ConnectionsController.create);
+router.get('/connections', ConnectionsController.index);
 
 export default router;

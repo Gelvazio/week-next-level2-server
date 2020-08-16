@@ -18,11 +18,11 @@ class ConnectionsController {
     return response.status(201).json(connection);
   }
 
-  // async index(request: Request, response: Response) {
-  //   const userRepository = getCustomRepository(UserRepository);
+  async index(request: Request, response: Response) {
+    const connectionRepository = getCustomRepository(ConnectionRepository);
 
-  //   response.json(await userRepository.find());
-  // }
+    response.json(await connectionRepository.count());
+  }
 }
 
 export default new ConnectionsController();
