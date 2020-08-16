@@ -1,4 +1,4 @@
-import { getCustomRepository } from 'typeorm';
+import { getCustomRepository, LessThanOrEqual } from 'typeorm';
 import { Request, Response } from 'express';
 
 import ClasseRepository from '../repositories/ClasseRepository';
@@ -49,7 +49,25 @@ class ClasseController {
   async index(request: Request, response: Response) {
     const classeRepository = getCustomRepository(ClasseRepository);
 
-    response.json(await classeRepository.find());
+    const filters = request.query;
+    const subject = filters.subject as string;
+    const week_day = filters.week_day as string;
+    const time = filters.time as string;
+
+    const timeInMinutes = convertHourToMinutes(time);
+
+    const classe = await classeRepository
+      .createQueryBuilder('classes')
+      .leftJoinAndSelect('classes.class_schedules', 'class_schedules')
+      .where('classes.subject = :subject', { subject })
+      .andWhere('class_schedules.week_day = :week_day', { week_day })
+      .andWhere('class_schedules.from <= :timeInMinutes', { timeInMinutes })
+      .andWhere('class_schedules.to > :timeInMinutes', { timeInMinutes })
+      // .getSql();
+      // .printSql()
+      .getMany();
+
+    return response.json(classe);
   }
 }
 

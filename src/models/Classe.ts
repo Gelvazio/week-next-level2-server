@@ -1,6 +1,7 @@
 import {
   Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, JoinColumn, ManyToOne, OneToMany,
 } from 'typeorm';
+
 import User from './User';
 import ClassSchedule from './ClassSchedule';
 
