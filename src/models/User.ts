@@ -1,6 +1,7 @@
 import {
-  Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn,
+  Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany,
 } from 'typeorm';
+import Classe from './Classe';
 
 @Entity('users')
 class User {
@@ -18,6 +19,9 @@ class User {
 
   @Column()
   bio: string;
+
+  @OneToMany(() => Classe, (classe) => classe.user)
+  classes: Classe[];
 
   @CreateDateColumn()
   created_at: Date;
