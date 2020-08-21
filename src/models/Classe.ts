@@ -19,7 +19,7 @@ class Classe {
   @Column()
   user_id: string;
 
-  @ManyToOne(() => User, (user) => user.classes, { eager: true })
+  @ManyToOne(() => User, (user) => user.classes)
   @JoinColumn({ name: 'user_id' })
   user: User;
 
