@@ -5,29 +5,49 @@
 # :pushpin: Tabela de conteúdos
 <!--ts-->
    * [Sobre](#sobre)
-   * [Tecnologias](#tecnologias)
+   * [Preview do Projeto](#preview)
    * [Como rodar o projeto](#run)
-      * [Startar a API](#api)
-   
+      * [Ligar a API](#api)
+   * [Tecnologias](#tecnologias)
    * [Licença](#license)
 <!--te-->
 
-<br><br>
-<div name=sobre>## 📚 Sobre ##</div>
+
+<h1 name="sobre">ℹ Sobre o Projeto</h1>
 O projeto trata-se uma plataforma de estudos online, que tem como objetivo conectar professores e alunos.
 
-<br><br>
-<div name=tecnologias>
-**🔗 Tecnologias utilizadas:**
+<h1 name="run">:construction_worker: Como rodar o projeto</h1> <br>
+
+```bash
+# Clone Repository
+$ git clone https://github.com/dantls/week-next-level2-server.git
+```
+
+<h3 name='api'>📦  Startar a API</h3><br>
+
+```bash
+# Instale as dependencias
+$ yarn
+# Ligue a API
+$ yarn start
+```
+Access API at http://localhost:3333/
+
+<h1 name="tecnologias">🛠 Tecnologias</h1>
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
 - [NodeJS](https://nodejs.org/en/)
 - [Express](https://expressjs.com)
 - [TypeScript](https://www.typescriptlang.org)
 - [TypeORM](https://typeorm.io/#/)
-</div>
-<br><br>
-**📊 Dependências:**
+
+<h1 name="tecnologias">🛠 Dependências</h1>
+
 - [pg](https://www.npmjs.com/package/pg)
 - [TypeORM](https://www.npmjs.com/package/typeorm)
 - [Axios](https://www.npmjs.com/package/axios)
-<br><br>
-[**Layout Proffy**](https://www.figma.com/file/GHGS126t7WYjnPZdRKChJF/Proffy-Web?node-id=0%3A1)
+
+
+
+
