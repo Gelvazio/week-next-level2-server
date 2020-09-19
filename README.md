@@ -1,4 +1,4 @@
-# Proffy | Next Level Week
+# Proffy | Next Level Week 2
 
 
 ## 📚 Descrição ##
@@ -8,8 +8,12 @@ O projeto trata-se uma plataforma de estudos online, que tem como objetivo conec
 - [NodeJS](https://nodejs.org/en/)
 - [Express](https://expressjs.com)
 - [TypeScript](https://www.typescriptlang.org)
+- [TypeORM](https://typeorm.io/#/)
+
+
 
 **📊 Dependências:**
-- [SQLite3](https://www.npmjs.com/package/sqlite3)
+- [pg](https://www.npmjs.com/package/pg)
+- [TypeORM](https://www.npmjs.com/package/typeorm)
 - [Axios](https://www.npmjs.com/package/axios)
 
