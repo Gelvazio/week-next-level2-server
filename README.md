@@ -49,5 +49,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Axios](https://www.npmjs.com/package/axios)
 
 
-
-
+<h4 name="license" align="center">
+    Desenvolvido por <a href="https://www.linkedin.com/in/danilo-gomes-394459103/" target="_blank">Danilo Gomes</a>
+</h4>
