@@ -58,15 +58,20 @@ class ClasseController {
 
     const classe = await classeRepository
       .createQueryBuilder('classes')
+      // .select([
+      //   'classes.id',
+      //   'classes.subject',
+      //   'classes.cost',
+      // ])
       .leftJoinAndSelect('classes.class_schedules', 'class_schedules')
       .leftJoinAndSelect('classes.user', 'users')
       .where('classes.subject = :subject', { subject })
       .andWhere('class_schedules.week_day = :week_day', { week_day })
       .andWhere('class_schedules.from <= :timeInMinutes', { timeInMinutes })
       .andWhere('class_schedules.to > :timeInMinutes', { timeInMinutes })
+      .getMany();
       // .getSql();
       // .printSql()
-      .getMany();
 
     return response.json(classe);
   }
